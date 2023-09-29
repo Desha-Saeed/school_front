@@ -39,6 +39,8 @@ export class CoursesService {
       course_id: course_id,
     };
 
+    console.log(data);
+
     // Define the HTTP options with the body
     const options = {
       headers: headers,

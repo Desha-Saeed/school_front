@@ -63,6 +63,8 @@ export class CourseDetailsComponent {
   }
 
   removeFromCourse(id: number) {
+    console.log(id);
+
     this.courseService
       .removeStudentFromCourse(id, this.courseID)
       .subscribe((res) => this.loadCourseInfo());
