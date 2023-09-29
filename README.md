@@ -1,27 +1,49 @@
-# SchoolFront
+# Angular Frontend App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+This is the frontend application for Student Management System. It provides feature like enrollment of students and adding new students also viewing all the grades on the courses
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Follow these instructions to get the project up and running on your local machine for development and testing purposes.
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Make sure you have the following software installed on your machine:
 
-## Build
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+- [Angular CLI](https://angular.io/cli)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Installation
 
-## Running unit tests
+1. Clone the repository to your local machine:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```bash
+   git clone https://github.com/your-username/your-angular-app.git
 
-## Running end-to-end tests
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Navigate to project folder and install dependencies
 
-## Further help
+   ```bash
+    cd your-angular-app
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    npm install
+
+   ```
+
+## Important:
+
+    add your api url to both the services files in  src/app/services/courses.service.ts and src/app/services/students.service.ts respectively.
+
+3. Running the app in dev mode
+
+   ```bash
+   ng serve -o
+   ```
+
+4.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
