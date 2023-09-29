@@ -53,20 +53,20 @@
     </thead>
     <tbody>
       <tr *ngFor="let student of students">
-        <td>{{ student.full_name }}</td>
-        <td>{{ student.code }}</td>
-        <td>{{ student.date_of_birth | date }}</td>
-        <td>{{ student.email }}</td>
-        <td>{{ student.level_id }}</td>
-        <td class="text-center">
+        <td class="p-3">{{ student.full_name }}</td>
+        <td class="p-3">{{ student.code }}</td>
+        <td class="p-3">{{ student.date_of_birth | date }}</td>
+        <td class="p-3">{{ student.email }}</td>
+        <td class="p-3">{{ student.level_id }}</td>
+        <td class="text-center p-3">
           <a
-            class="btn btn-warning btn-sm mx-1"
+            class="btn btn-warning btn-sm mx-3 px-3 py-2"
             [routerLink]="['/update-student', student.id]"
           >
             Edit
           </a>
           <button
-            class="btn btn-danger btn-sm mx-1"
+            class="btn btn-danger btn-sm mx-2 px-3 py-2"
             (click)="deleteStudent(student)"
           >
             Delete

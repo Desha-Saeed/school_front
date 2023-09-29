@@ -10,7 +10,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
-import { CoursesComponent } from './courses/courses.component';
+
+import { CourseDetailsComponent } from './course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CoursesComponent } from './courses/courses.component';
     CourseComponent,
     AddStudentComponent,
     UpdateStudentComponent,
-    CoursesComponent,
+
+    CourseDetailsComponent,
   ],
   imports: [
     BrowserModule,

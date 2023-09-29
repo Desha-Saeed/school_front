@@ -1,20 +1,37 @@
 <!-- Course Table -->
+
+<!-- Search Input and Button -->
+<div class="d-flex w-50 justify-content-end my-4">
+  <div class="input-group">
+    <input
+      type="text"
+      class="form-control mx-2"
+      [(ngModel)]="searchTerm"
+      placeholder="Search by code, name"
+    />
+    <button class="btn btn-primary" (click)="search()">Search</button>
+  </div>
+</div>
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
     <thead class="thead-dark">
       <tr>
-        <th>Name</th>
-        <th>Code</th>
-        <th>Created At</th>
-        <th>Updated At</th>
+        <th class="p-4">Name</th>
+        <th class="p-4">Code</th>
+        <th class="p-4">Created At</th>
+        <th class="p-4">Updated At</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let course of courses">
-        <td>{{ course.name }}</td>
-        <td>{{ course.code }}</td>
-        <td>{{ course.created_at | date }}</td>
-        <td>{{ course.updated_at }}</td>
+        <td class="p-3">{{ course.name }}</td>
+        <td class="p-3">{{ course.code }}</td>
+        <td class="p-3">{{ course.created_at | date }}</td>
+        <td class="p-3">{{ course.updated_at | date }}</td>
+
+        <td class="text-center p-2">
+          <a [routerLink]="['/courses', course.id]">View Details</a>
+        </td>
       </tr>
     </tbody>
   </table>

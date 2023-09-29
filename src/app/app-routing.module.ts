@@ -4,6 +4,7 @@ import { StudentComponent } from './student/student.component';
 import { CourseComponent } from './course/course.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/students', pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'update-student/:id', component: UpdateStudentComponent },
 
   { path: 'courses', component: CourseComponent },
+  { path: 'courses/:id', component: CourseDetailsComponent },
 ];
 
 @NgModule({
