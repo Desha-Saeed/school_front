@@ -1,0 +1,93 @@
+<div class="container">
+  <h2 class="py-4">Add New Student</h2>
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <div class="form-group my-2">
+      <label for="full_name">Full Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="full_name"
+        formControlName="full_name"
+      />
+      <div
+        class="text-danger py-2"
+        *ngIf="studentForm.get('full_name')!.hasError('required')"
+      >
+        Full Name is required.
+      </div>
+    </div>
+    <div class="form-group my-2">
+      <label for="code">Code:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="code"
+        formControlName="code"
+      />
+      <div
+        class="text-danger"
+        *ngIf="studentForm.get('code')!.hasError('required')"
+      >
+        Code is required.
+      </div>
+    </div>
+    <div class="form-group my-3">
+      <label for="date_of_birth">Date of Birth:</label>
+      <input
+        type="date"
+        class="form-control"
+        id="date_of_birth"
+        formControlName="date_of_birth"
+      />
+      <div
+        class="text-danger"
+        *ngIf="studentForm.get('date_of_birth')!.hasError('required')"
+      >
+        Date of Birth is required.
+      </div>
+    </div>
+    <div class="form-group my-3">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+      <div
+        class="text-danger"
+        *ngIf="studentForm.get('email')!.hasError('required')"
+      >
+        Email is required.
+      </div>
+      <div
+        class="text-danger"
+        *ngIf="studentForm.get('email')!.hasError('email')"
+      >
+        Invalid email format.
+      </div>
+    </div>
+    <div class="form-group my-3">
+      <label for="level">Level:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="level_id"
+        formControlName="level_id"
+      />
+      <div
+        class="text-danger"
+        *ngIf="studentForm.get('level_id')!.hasError('required')"
+      >
+        Level is required.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary my-2">Add Student</button>
+  </form>
+  <div class="alert alert-success" *ngIf="successMessage">
+    {{ successMessage }}
+  </div>
+  <div class="alert alert-danger" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+</div>

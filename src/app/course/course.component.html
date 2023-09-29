@@ -1,0 +1,21 @@
+<!-- Course Table -->
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Created At</th>
+        <th>Updated At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courses">
+        <td>{{ course.name }}</td>
+        <td>{{ course.code }}</td>
+        <td>{{ course.created_at | date }}</td>
+        <td>{{ course.updated_at }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
